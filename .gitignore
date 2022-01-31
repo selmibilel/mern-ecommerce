@@ -1,0 +1,34 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+/mongodb
+/React-Shop-v1
+# dependencies
+/ecommerce/node_modules
+/ecommerceapi/node_modules
+/ecommerce/.pnp
+/ecommerceapi/.pnp
+/ecommerce/.pnp.js
+/ecommerceapi/.pnp.js
+
+# testing
+/ecommerce/coverage
+/ecommerceapi/coverage
+
+# production
+/ecommerce/build
+/ecommerceapi/build
+
+# misc
+/ecommerce/.DS_Store
+/ecommerceapi/.DS_Store
+/ecommerce/.env.local
+/ecommerceapi/.env.local
+/ecommerce/.env.development.local
+/ecommerceapi/.env.development.local
+/ecommerce/.env.test.local
+/ecommerceapi/.env.test.local
+/ecommerce/.env.production.local
+/ecommerceapi/.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

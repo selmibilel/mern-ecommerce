@@ -1,0 +1,29 @@
+.loginFormContainer{
+    flex: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.loginForm{
+    display: flex;
+    flex-direction: column;
+    border:1px solid teal;
+    padding: 30px;
+}
+
+
+.loginInput{
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 200px;
+}
+
+.buttonLogin{
+    padding: 10px;
+    background-color: teal;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
