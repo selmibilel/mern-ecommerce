@@ -3,6 +3,8 @@ import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import "./newProduct.css";
 import {GoDiffAdded} from "react-icons/go"
+import axios from "axios";
+import { addProduct } from "../../redux/apiCalls";
 
 
 export default function NewProduct() {
@@ -35,7 +37,7 @@ export default function NewProduct() {
     setColors(e.target.value.split(","))
   }
 
-  const handleClick = (e) =>{
+  const handleClick = async (e) =>{
     e.preventDefault();
     const newProduct = {
       ...inputs,
@@ -49,11 +51,23 @@ export default function NewProduct() {
       data.append("name", filename);
       data.append("file",file);
       newProduct.img= filename;
+      try {
+        await axios.post("/upload", data);
+      } catch (err) {
+        console.log(err);
+      }
     }
-    console.log(newProduct);
+    addProduct(newProduct, TOKEN, dispatch)
+    .then((res)=>{
+      window.location.replace("/product/"+ res.data._id);
+    })
+    .catch((err)=>{
+      console.log(err);
+    })
+    // console.log(newProduct);
   }
   
-  
+
   return (
     <div className="newProduct">
       <h1 className="addProductTitle">New Product</h1>

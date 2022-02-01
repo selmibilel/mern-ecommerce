@@ -2,6 +2,18 @@
     flex: 4;
 }
 
+.productAddButton {
+    width: 120px;
+    border: none;
+    padding: 5px;
+    margin-bottom: 5px;
+    background-color: teal;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
 .productListItem{
     display: flex;
     align-items: center;

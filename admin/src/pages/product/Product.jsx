@@ -92,7 +92,7 @@ export default function Product() {
                 categories:["tshirt","man","women"],
                 createdAt: "2021-12-28T00:59:27.992Z"
             }
-            console.log(newProduct);
+            // console.log(newProduct);
           updateProduct(productId, newProduct, TOKEN, dispatch);
       }
 

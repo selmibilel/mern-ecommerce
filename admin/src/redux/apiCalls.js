@@ -55,10 +55,11 @@ export const updateProduct = async (id, product, TOKEN, dispatch) =>{
 export const addProduct = async (product, TOKEN, dispatch) =>{
     dispatch(addProductStart());
     try {
-        await axios.post("/products", product,{
+        const res = await axios.post("/products", product,{
             headers:{token:`Bearer ${TOKEN}`}
         });
-        dispatch(addProductSuccess(product));
+        dispatch(addProductSuccess(res.data));
+        return res;
     } catch (err) {
         dispatch(addProductFailure());
     }
